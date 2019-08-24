@@ -21,9 +21,14 @@ renderButtons()
 
 // When the user clicks on a button, the page should grab 10 static, non-animated gif images from the GIPHY API and place them on the page.
 
-//this function handles events where one button is clicked
 $("#submit").on('click', function() {
-    alert("I have been clicked");
     event.preventDefault();
 
+//Grabs the text from the input field
+
+var movie = $("#add-movie").val().trim();
+
+// Adds user input to array and creates new button
+topics.push(movie);
+renderButtons()
 });
