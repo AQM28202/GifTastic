@@ -30,5 +30,6 @@ var movie = $("#add-movie").val().trim();
 
 // Adds user input to array and creates new button
 topics.push(movie);
+$("#buttons-display").empty();
 renderButtons()
 });
