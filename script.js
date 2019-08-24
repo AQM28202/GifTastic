@@ -24,4 +24,6 @@ renderButtons()
 //this function handles events where one button is clicked
 $("#submit").on('click', function() {
     alert("I have been clicked");
+    event.preventDefault();
+
 });
