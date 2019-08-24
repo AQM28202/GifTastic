@@ -6,5 +6,12 @@ $(document).ready(function(){
 // Your app should take the topics in this array and create buttons in your HTML. Try using a loop that appends a button for each string in the array.
 function renderButtons() {
     for (var i=0; i < topics.length; i++) {
+        var movieBtn = $("<button>");
+        movieBtn.addClass("btn btn-outline-primary");
+        movieBtn.attr("movie-name", topics[i]);
+        movieBtn.text(topics[i]);
+        $("#buttons").append(movieBtn);
 
-
+}
+}
+}
