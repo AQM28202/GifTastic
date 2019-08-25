@@ -38,6 +38,7 @@ $(document).on('click', '.btn-outline-primary',  function() {
 
  // Creating variable to house query url
 var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + newButton + "&api_key=HxjyPcOPD2gWbFGHpMzakdcqp1m6KWI9"; 
+console.log(queryURL); 
 
 });
 
