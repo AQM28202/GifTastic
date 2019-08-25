@@ -18,6 +18,8 @@ function renderButtons() {
 renderButtons()
 
 // When the user clicks on a button, the page should grab 10 static, non-animated gif images from the GIPHY API and place them on the page.
+
+// Wiring up submit button
 $("#submit").on('click', function() {
     event.preventDefault();
 
@@ -40,5 +42,17 @@ $(document).on('click', '.btn-outline-primary',  function() {
 var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + newButton + "&api_key=HxjyPcOPD2gWbFGHpMzakdcqp1m6KWI9"; 
 console.log(queryURL); 
 
-});
+// Perfoming an AJAX GET request to our queryURL
+$.ajax({
+    url: queryURL,
+    method: "GET"
+  })
+  .then(function(response) {
+      console.log(response)
+
+
+
+
+
+    });});
 
