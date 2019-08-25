@@ -50,6 +50,12 @@ $.ajax({
   .then(function(response) {
       console.log(response)
 
+    // Storing the response's array of in a variable
+    var results = response.data;
+    
+    // Looping over every array in preparation to pull out static images to display
+    for (var i = 0; i < results.length; i++) {
+
 
 
 
