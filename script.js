@@ -60,7 +60,7 @@ $.ajax({
     for (var i = 0; i < results.length; i++) {
         
         // Saving the images's url as  variable
-        var staticImageUrl = response.data[i].images.original_still.url;
+        var staticImageUrl = response.data[i].images.fixed_height_still.url;
 
         // Creating and storing an image tag
         var movieImage = $("<img>");
