@@ -55,6 +55,9 @@ $.ajax({
     
     // Looping over every array in preparation to pull out static images to display
     for (var i = 0; i < results.length; i++) {
+        
+        // 
+        var staticImageUrl = response.data.images.original_still.url;
 
 
 
