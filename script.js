@@ -89,3 +89,6 @@ $(document).on('click', '.btn-outline-primary', function () {
         });
 });
 
+$(document).on('click', 'movieImage',  function() {
+    alert("clicked!");
+});
