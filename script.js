@@ -35,7 +35,7 @@ renderButtons()
 });
 
 // Wirimg up movie buttons to function when clicked
-$(document).on('click', 'button',  function() {
+$(document).on('click', '.btn-outline-primary',  function() {
     alert("I'm working");
 
 });
