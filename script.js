@@ -33,3 +33,11 @@ topics.push(movie);
 $("#buttons-display").empty();
 renderButtons()
 });
+
+// Wirimg up movie buttons to function when clicked
+$(document).on('click', 'button',  function() {
+    alert("I'm working");
+
+});
+
+    // var newButton = $(this).attr('movie-name');
