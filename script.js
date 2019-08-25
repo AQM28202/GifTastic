@@ -68,13 +68,21 @@ $.ajax({
         var movieImage = $("<img>");
         movieImage.attr("src", staticImageUrl);
         movieImage.attr("alt", "movie gif");
-        $("#gif-display").append(movieImage);
-
-        var displayRating = $('<p>').text("Rating: " + imgRating);
-        $("#gif-display").append(displayRating)
-        console.log(imgRating)
+        var indivGif = $('<div class="item">');
 
 
+        // var displayRating = $('<p>').text("Rating: " + imgRating);
+        // $("#gif-display").append(displayRating)
+        // console.log(imgRating)
+
+        // var movieImage = $("<img>");
+        // movieImage.attr("src", staticImageUrl);
+        // movieImage.attr("alt", "movie gif");
+        // $("#gif-display").append(movieImage);
+
+        indivGif.append(movieImage);
+        $("#gif-display").append(indivGif);
+       
 
     }
 
