@@ -39,7 +39,7 @@ $(document).on('click', '.btn-outline-primary',  function() {
  var newButton = $(this).attr('movie-name');
 
  // Creating variable to house query url
-var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + newButton + "&api_key=HxjyPcOPD2gWbFGHpMzakdcqp1m6KWI9"; 
+var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + newButton + "&api_key=HxjyPcOPD2gWbFGHpMzakdcqp1m6KWI9&limit=10"; 
 console.log(queryURL); 
 
 // Perfoming an AJAX GET request to our queryURL
@@ -54,5 +54,6 @@ $.ajax({
 
 
 
-    });});
+    });
+});
 
