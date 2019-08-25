@@ -56,12 +56,17 @@ $.ajax({
     // Looping over every array in preparation to pull out static images to display
     for (var i = 0; i < results.length; i++) {
         
-        // 
+        // Saving the images's url as  variable
         var staticImageUrl = response.data.images.original_still.url;
 
+        // Creating and storing an image tag
+        var movieImage = $("<img>");
+        movieImage.attr("src", staticImageUrl);
+        movieImage.attr("alt", "movue gif");
 
 
 
+    }
 
     });
 });
