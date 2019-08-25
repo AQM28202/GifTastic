@@ -71,16 +71,16 @@ $.ajax({
         var indivGif = $('<div class="item">');
 
 
-        // var displayRating = $('<p>').text("Rating: " + imgRating);
-        // $("#gif-display").append(displayRating)
-        // console.log(imgRating)
+        var displayRating = $('<div class="p-3 mb-2 bg-primary text-white">').text("Rating: " + imgRating);
+       
+        console.log(imgRating)
 
-        // var movieImage = $("<img>");
-        // movieImage.attr("src", staticImageUrl);
-        // movieImage.attr("alt", "movie gif");
-        // $("#gif-display").append(movieImage);
-
+     
+     
+        indivGif.append(displayRating);
         indivGif.append(movieImage);
+
+        
         $("#gif-display").append(indivGif);
        
 
