@@ -57,13 +57,13 @@ $.ajax({
     for (var i = 0; i < results.length; i++) {
         
         // Saving the images's url as  variable
-        var staticImageUrl = response.data.images.original_still.url;
+        var staticImageUrl = response.data[i].images.original_still.url;
 
         // Creating and storing an image tag
         var movieImage = $("<img>");
         movieImage.attr("src", staticImageUrl);
         movieImage.attr("alt", "movue gif");
-
+        $("#gif-display").append(movieImage);
 
 
     }
