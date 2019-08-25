@@ -35,6 +35,9 @@ renderButtons()
 // Wiring up movie buttons to function when clicked
 $(document).on('click', '.btn-outline-primary',  function() {
    
+// Empty gif-display
+ $('#gif-display').empty();    
+
 // Creating variable for the new button that is created by user input
  var newButton = $(this).attr('movie-name');
 
