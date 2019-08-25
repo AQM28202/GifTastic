@@ -61,7 +61,8 @@ $.ajax({
         
         // Saving the images's url as  variable
         var staticImageUrl = response.data[i].images.fixed_height_still.url;
-        var imgRating = response.data[i].images.rating;
+        var imgRating = response.data[i].rating;
+        console.log(imgRating)
 
         // Creating and storing an image tag
         var movieImage = $("<img>");
@@ -69,9 +70,9 @@ $.ajax({
         movieImage.attr("alt", "movie gif");
         $("#gif-display").append(movieImage);
 
-        var displayRating = $("<h1>");
-        displayRating.attr("src", imgRating);
-        $("#card-header").html(displayRating);
+        var displayRating = $('<p>').text("Rating: " + imgRating);
+        $("#gif-display").append(displayRating)
+        console.log(imgRating)
 
 
 
