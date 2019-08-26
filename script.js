@@ -74,9 +74,8 @@ $(document).on('click', '.btn-outline-primary', function () {
 		        movieImage.attr('data-state', "still");
                 movieImage.addClass("gif");
                 
+                
                 var indivGif = $('<div class="item">');
-
-
                 var displayRating = $('<div class="p-1 mb-2 bg-primary text-white">').text("Rating: " + imgRating);
 
 
@@ -94,9 +93,16 @@ $(document).on('click', '.btn-outline-primary', function () {
         });
 });
 
-// Targetting the button class gif that I just created to make every pichture cliackable
-$(document).on('click', '.gif',  function() {
+    // Targetting the button class gif that I just created to make every pichture cliackable
+    $(document).on('click', '.gif',  function() {
+
+    // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
     var state = $(this).attr("data-state");
+
+    // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+    // Then, set the image's data-state to animate
+    // Else set src to the data-still value
+      
     if (state === "still") {
         $(this).attr("src", $(this).attr("data-animate"));
         $(this).attr("data-state", "animate");
