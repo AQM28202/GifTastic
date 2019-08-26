@@ -62,18 +62,23 @@ $(document).on('click', '.btn-outline-primary', function () {
                 // Saving the images's url as  variable
                 var staticImageUrl = response.data[i].images.fixed_height_still.url;
                 var imgRating = response.data[i].rating;
-                console.log(imgRating)
 
                 // Creating and storing an image tag
                 var movieImage = $("<img>");
                 movieImage.attr("src", staticImageUrl);
                 movieImage.attr("alt", "movie gif");
+
+                // Giving the img tag attributes of properties pulled off the response 
+                movieImage.attr('data-still', response.data[i].images.fixed_height_still.url);
+                movieImage.attr('data-animate', response.data[i].images.fixed_height.url);
+		        movieImage.attr('data-state', "still");
+                movieImage.addClass("showImage");
+                
                 var indivGif = $('<div class="item">');
 
 
                 var displayRating = $('<div class="p-1 mb-2 bg-primary text-white">').text("Rating: " + imgRating);
 
-                console.log(imgRating)
 
 
 
