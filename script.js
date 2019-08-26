@@ -72,7 +72,7 @@ $(document).on('click', '.btn-outline-primary', function () {
                 movieImage.attr('data-still', response.data[i].images.fixed_height_still.url);
                 movieImage.attr('data-animate', response.data[i].images.fixed_height.url);
 		        movieImage.attr('data-state', "still");
-                movieImage.addClass("showImage");
+                movieImage.addClass("gif");
                 
                 var indivGif = $('<div class="item">');
 
@@ -94,7 +94,13 @@ $(document).on('click', '.btn-outline-primary', function () {
         });
 });
 
-{/* <img src="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-still="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-animate="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200.gif" data-state="still" class="gif">
+// Targetting the button class gif that I just created to make every pichture cliackable
+$(".gif").on("click", function() {
+    alert("ClICKED!");
+}
+
+
+/* <img src="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-still="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-animate="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200.gif" data-state="still" class="gif">
   <img src="https://media2.giphy.com/media/8rFQp4kHXJ0gU/200_s.gif" data-still="https://media2.giphy.com/media/8rFQp4kHXJ0gU/200_s.gif" data-animate="https://media2.giphy.com/media/8rFQp4kHXJ0gU/200.gif" data-state="still" class="gif">
   <img src="https://media3.giphy.com/media/W6LbnBigDe4ZG/200_s.gif" data-still="https://media3.giphy.com/media/W6LbnBigDe4ZG/200_s.gif" data-animate="https://media3.giphy.com/media/W6LbnBigDe4ZG/200.gif" data-state="still" class="gif">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -112,4 +118,4 @@ $(document).on('click', '.btn-outline-primary', function () {
         $(this).attr("src", $(this).attr("data-still"));
         $(this).attr("data-state", "still");
       }
-    }); */}
+    }); */
